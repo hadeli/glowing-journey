@@ -1,0 +1,25 @@
+controllers:
+    resource: ../src/Controller/
+    type: annotation
+
+kernel:
+    resource: ../src/Kernel.php
+    type: annotation
+
+hello:
+    controller: App\Controller\HelloController::helloAction
+    path: /hello
+
+book_get:
+    controller: App\Controller\BookController::getAction
+    path: /book
+    methods: [GET]
+
+book_post:
+    controller: App\Controller\BookController::postAction
+    path: /book
+    methods: [POST]
+book_patch:
+    controller: App\Controller\BookController::patchAction
+    path: /book
+    methods: [PATCH]
